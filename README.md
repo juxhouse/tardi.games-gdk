@@ -1,4 +1,4 @@
-# 🎲 Creating a Tardi Game 👾
+# 🎲 Tardi Game Development Kit (Tardi GDK) 👾
 
 Hi! You can create your own Tardi games!
 
@@ -18,29 +18,29 @@ Tardi makes it easy for the Table and Hand parts of your game to send messages t
 
 ## Creating a Game
 
-#### 1) Fork this repo
+#### 1) Create your `tardi.games` repo
 
-[Fork this repo](https://github.com/juxhouse/tardi.games/fork) to your account.
+Create your tardi.games repo using [this template](https://github.com/new?name=tardi.games&template_name=tardi.games&template_owner=juxhouse).
 
 > [!IMPORTANT]
-> Do not rename the repo. It must be called `{your-account}/tardi.games`.
+> The repo must be called `{your-account}/tardi.games`.
 
-Clone it locally.
+Clone it to your machine.
 
 
 #### 2) Rename the example game
 
 Inside `games`, rename the `tic-tac-toe` folder to the name of your game. Use only lowercase a-z, digits and dashes.
 
-Edit the `game.json` file to set your new title, description and number of players.
+Inside your renamed game folder, edit the `game.json` file to set things like the game title, description and number of players.
 
 
-#### 3) Code It
+#### 3) Code it
 
-Inside the game folder, install the dependencies. Run:
+Install the dependencies. Inside your game folder, run:
 
 ```
-npm update @juxhouse/tardi-build @juxhouse/tardi-sdk
+npm update @juxhouse/tardi-build @juxhouse/tardi-core
 npm i
 ```
 
@@ -52,10 +52,10 @@ To play it in dev mode:
 
 ![Game example in dev mode](example.png)
 
-Dev mode will open your game Table with 2 Hands already connected.
+That will open your game Table with 2 Hands already connected.
 
 
-#### 4) Release It!
+#### 4) Release it!
 
 Inside the game folder, run:
 
