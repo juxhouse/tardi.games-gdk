@@ -1,4 +1,4 @@
-# 🎲 Tardi Game Development Kit (Tardi GDK) 👾
+# 🎲 Tardi Game Development Kit (GDK) 👾
 
 Hi! You can create your own Tardi games!
 
