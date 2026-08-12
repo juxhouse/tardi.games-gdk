@@ -23,7 +23,7 @@ Tardi makes it easy for the Table and Hand parts of your game to send messages t
 Create your tardi.games repo using [this template](https://github.com/new?name=tardi.games&template_name=tardi.games&template_owner=juxhouse).
 
 > [!IMPORTANT]
-> The repo must be called `{your-account}/tardi.games`.
+> The repo must be called `{your-account}/tardi.games` and must be public.
 
 Clone it to your machine.
 
@@ -57,18 +57,21 @@ That will open your game Table with 2 Hands already connected.
 
 #### 4) Release it!
 
-Inside the game folder, run:
+Just commit and push your changes to the `main` branch.
 
-`npm run build`
+A Github action will pick up those changes automatically, build the game and generate a release.
 
-Commit the generated files to the `main` branch and push to Github. Make sure your repo is called `tardi.games`.
+You can see your releases here:
+`https://github.com/YOUR-ACCOUNT/tardi.games/releases`
 
-The Tardi platform will automatically detect your changes and release the new version. This takes a couple of minutes.
+The Tardi platform will automatically detect your release and deploy it. This takes a couple of minutes.
+
+Make sure your tardi.games repo is PUBLIC.
 
 
 #### 5) Play with your friends
 
-When choosing a game to play on [tardi.games](https://tardi.games) you can search for your github account and/or game name.
+When choosing a game to play on [tardi.games](https://tardi.games) you can search for your Github account and/or game name.
 
 Call your friends! Have fun!
 
