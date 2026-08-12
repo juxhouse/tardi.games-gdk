@@ -2,7 +2,7 @@
 
 Hi! You can create your own Tardi games!
 
-If you haven't played some games on [tardi.games](tardi.games) yet, go there now and play a few. Your life as a Tardi game developer will be much easier. 😉
+If you haven't played some games on [tardi.games](https://tardi.games) yet, go there now and play a few. Your life as a Tardi game developer will be much easier. 😉
 
 
 ## Basic Concepts
