@@ -2,9 +2,6 @@
 
 # Tardi.games Software Development Kit (SDK)
 
-(Get the latest version [here](https://github.com/juxhouse/tardi.games-gdk/blob/main/SDK.md))
-
-
 #### Project Files
 
 ```
