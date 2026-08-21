@@ -37,18 +37,13 @@ Inside your renamed game folder, edit the `game.json` file to set things like th
 
 #### 3) Code it
 
-Install the dependencies. Inside your game folder, run:
-
-```
-npm update @juxhouse/tardi-build @juxhouse/tardi-core
-npm i
-```
-
 Use your coding agent to make the game the way you want it.
 
-To play it in dev mode:
+To play it in dev mode, inside your game folder run:
 
 `npm run dev`
+
+That also installs/updates the Tardi libs for you, so it's the only command you need.
 
 ![Game example in dev mode](example.png)
 
