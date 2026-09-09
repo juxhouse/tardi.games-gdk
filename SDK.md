@@ -43,8 +43,22 @@ Commit them to your `main` branch and push to Github. Every couple of minute, Ta
     "min": 2,
     "max": 8
   },
+  "sharedScreen": "required"
 }
 ```
+
+`sharedScreen` is required, and says how your game uses the shared screen — the
+TV everyone looks at, which runs your table:
+
+| Value | Meaning |
+| --- | --- |
+| `required` | The game cannot be played without the table. |
+| `optional` | It plays either way; the table adds to it when there is one. |
+| `none` | Hands only. The game shows no table at all. |
+
+Tardi lets players start a game with no shared screen, on their phones alone, so
+it has to know which games that is honest for. `npm run dev` and `npm run build`
+fail until your `game.json` says.
 
 
 ## Responsiveness
