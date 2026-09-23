@@ -1,4 +1,4 @@
-<!-- last-update: 2026-08-03 -->
+<!-- last-update: 2026-09-23 -->
 
 # Tardi.games Software Development Kit (SDK)
 
@@ -85,7 +85,7 @@ Import the SDK from your entry points (no globals are injected):
 
 ```js
 // src/table.js
-import { startMatch, sendToAllHands, endMatch } from '@juxhouse/tardi-core/table'
+import { startMatch, sendToAllHands, endMatch, hasSharedScreen } from '@juxhouse/tardi-core/table'
 
 // src/hand.js
 import { joinMatch, sendToTable } from '@juxhouse/tardi-core/hand'
@@ -139,6 +139,26 @@ Your Table can broadcast the same message (typically the entire game state) to a
 ```js
 sendToAllHands(message)  // Send any JS object you want.
 ```
+
+
+#### Playing Without a Shared Screen (Table)
+
+When players start your game on their phones alone, your Table still runs: on
+one of the phones, where nobody can see it. It must go on receiving messages
+and broadcasting state exactly as usual; only what it draws is wasted.
+
+```js
+hasSharedScreen()  // false when nobody sees your Table.
+```
+
+It is known before your Table draws anything and does not change during a
+match, so check it once at startup. When it is `false`, skip rendering, and
+above all skip animation loops: they would drain the phone's battery for
+nothing. The Table's iframe is still full size, so a game that ignores this
+keeps working, just less efficiently.
+
+Only a game whose `sharedScreen` is `optional` or `none` is ever started
+without a shared screen.
 
 
 
