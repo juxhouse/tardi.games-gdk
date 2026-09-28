@@ -85,10 +85,10 @@ Import the SDK from your entry points (no globals are injected):
 
 ```js
 // src/table.js
-import { startMatch, sendToAllHands, endMatch, hasSharedScreen } from '@juxhouse/tardi-core/table'
+import * as TardiTable from '@juxhouse/tardi-core/table'
 
 // src/hand.js
-import { joinMatch, sendToTable } from '@juxhouse/tardi-core/hand'
+import * as TardiHand from '@juxhouse/tardi-core/hand'
 ```
 
 Test locally with `npm run dev`: it serves one table and two hands wired
@@ -101,7 +101,7 @@ together like the platform, with no extra setup.
 
 Your Table starts the match passing the `onMessage` and `onPlayersChange` callback functions:
 
-`startMatch({onMessage, onPlayersChange});`
+`TardiTable.startMatch({onMessage, onPlayersChange});`
 
 
 #### Receiving Player Info (Table)
@@ -137,7 +137,7 @@ On receiving a message from a Hand, your Table will typically calculate the new 
 Your Table can broadcast the same message (typically the entire game state) to all Hands like this:
 
 ```js
-sendToAllHands(message)  // Send any JS object you want.
+TardiTable.sendToAllHands(message)  // Send any JS object you want.
 ```
 
 
@@ -148,7 +148,7 @@ one of the phones, where nobody can see it. It must go on receiving messages
 and broadcasting state exactly as usual; only what it draws is wasted.
 
 ```js
-hasSharedScreen()  // false when nobody sees your Table.
+TardiTable.hasSharedScreen()  // false when nobody sees your Table.
 ```
 
 It is known before your Table draws anything and does not change during a
@@ -169,7 +169,7 @@ without a shared screen.
 Your Hand joins the match by calling:
 
 ```js
-joinMatch({onStateChange});
+TardiHand.joinMatch({onStateChange});
 ```
 
 
@@ -199,7 +199,7 @@ The Hand must consider the game started only after it receives the first message
 Your Hand can send messages (typically its player's actions) to the Table:
 
 ```js
-sendToTable(message)  // Send any object you want.
+TardiHand.sendToTable(message)  // Send any object you want.
 ```
 
 Your Hand can send messages only after it has received the first Table state, above. Any message sent before that will be ignored.
@@ -210,7 +210,7 @@ Your Hand can send messages only after it has received the first Table state, ab
 The Table ends the match:
 
 ```js
-endMatch({
+TardiTable.endMatch({
   victor: 42  // The playerId of the winning player. Null means it was a draw
 });
 ```
