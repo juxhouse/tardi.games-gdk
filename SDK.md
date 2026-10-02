@@ -1,4 +1,4 @@
-<!-- last-update: 2026-09-23 -->
+<!-- last-update: 2026-10-02 -->
 
 # Tardi.games Software Development Kit (SDK)
 
@@ -39,13 +39,21 @@ Commit them to your `main` branch and push to Github. Every couple of minute, Ta
 {
   "title": "My Special Game",
   "description": "A game of mystery and adventure for many players.",
-  "players": {
-    "min": 2,
-    "max": 8
-  },
+  "players": [2, 3, 4, 5, 6, 7, 8],
   "sharedScreen": "required"
 }
 ```
+
+`players` is required: a nonempty array of positive integers listing every
+player count your game supports. The lobby offers Play only when the party's
+player count appears in this array.
+
+- `[2]` supports exactly two players.
+- `[2, 4]` supports two or four players, but not three.
+- `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]` supports one through twelve players.
+
+List each supported count explicitly. The previous `{ "min": 2, "max": 8 }`
+format is no longer valid; replace it with `[2, 3, 4, 5, 6, 7, 8]`.
 
 `sharedScreen` is required, and says how your game uses the shared screen — the
 TV everyone looks at, which runs your table:

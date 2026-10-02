@@ -32,7 +32,7 @@ Clone it to your machine.
 
 Inside `games`, rename the `tic-tac-toe` folder to the name of your game. Use only lowercase a-z, digits and dashes.
 
-Inside your renamed game folder, edit the `game.json` file to set things like the game title, description and number of players.
+Inside your renamed game folder, edit the `game.json` file to set things like the game title, description and allowed player counts. Set `players` to an array such as `[2, 4]` for a game that supports two or four players; see [SDK.md](SDK.md#gamejson-example).
 It must also set `sharedScreen` to `required`, `optional` or `none`, saying whether your game needs the TV table; see [SDK.md](SDK.md).
 
 
