@@ -76,6 +76,6 @@ Call your friends! Have fun!
 
 You can create as many games as you like in the `games` folder. Just copy the first one and rename it.
 
-Each game can have 100 files max. If you have more than 100 images or sounds, for examples, ask your agent: "URL-encode these images/sounds/clips using base64.".
+Each game can have 100 files max. If you have more than 100 images or sounds, for example, ask your agent: "URL-encode these images/sounds/clips using base64.".
 
 Each file can be 25MB max.
