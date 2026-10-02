@@ -111,7 +111,7 @@ The `onPlayersChange` function, passed above, will receive:
 ```js
 {
   players: [  // An array of the players that are in this match. Not null.
-    {playerId: 42, nick: "Happy Otter"},  // All keys are not null.
+    {playerId: 42, nick: "Happy Otter", isHost: true},
     {playerId: 43, nick: "Crazy Monkey"}
     ]
 }
@@ -181,8 +181,8 @@ Your Hand's `onStateChange` function, above, will receive:
 {
   playerId: 42  // The id of the player holding this Hand. Not null.
   players: [    // An array of the players in this match. Not null.
-    {playerId: 42, nick: "Happy Otter"},  // All keys are not null.
-    {playerId: 43, nick: "Crazy Monkey"}
+    {playerId: 42, nick: "Happy Otter", isHost: true},  // isHost is only present, as true, on the host.
+    {playerId: 43, nick: "Crazy Monkey"}  // All other keys are not null.
     ]
   messageFromTable: {...}  // The last message sent by the Table (typically the entire game state).
                            // Can be null if the Table has not yet sent any state or if the Table sent null.
