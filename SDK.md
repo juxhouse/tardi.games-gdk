@@ -52,9 +52,6 @@ player count appears in this array.
 - `[2, 4]` supports two or four players, but not three.
 - `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]` supports one through twelve players.
 
-List each supported count explicitly. The previous `{ "min": 2, "max": 8 }`
-format is no longer valid; replace it with `[2, 3, 4, 5, 6, 7, 8]`.
-
 `sharedScreen` is required, and says how your game uses the shared screen — the
 TV everyone looks at, which runs your table:
 
