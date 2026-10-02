@@ -33,7 +33,7 @@ Clone it to your machine.
 Inside `games`, rename the `tic-tac-toe` folder to the name of your game. Use only lowercase a-z, digits and dashes.
 
 Inside your renamed game folder, edit the `game.json` file to set things like the game title, description and number of players.
-It must also set `sharedScreen` to `required`, `optional` or `none`, saying whether your game needs the TV table; see SDK.md.
+It must also set `sharedScreen` to `required`, `optional` or `none`, saying whether your game needs the TV table; see [SDK.md](SDK.md).
 
 
 #### 3) Code it
