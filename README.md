@@ -33,7 +33,7 @@ Clone it to your machine.
 
 Inside `games`, rename the `tic-tac-toe` folder to the name of your game. Use only lowercase a-z, digits and dashes.
 
-Inside your renamed game folder, edit the `game.json` file to set things like the game title, description and number of players.
+Inside your renamed game folder, edit the `game.json` file to set things like the game title, description and allowed player counts. Set `players` to an array such as `[2, 4]` for a game that supports two or four players; see [SDK.md](SDK.md#gamejson-example).
 It must also set `sharedScreen` to `required`, `optional` or `none`, saying whether your game needs a Shared Screen; see [SDK.md](SDK.md).
 
 
@@ -77,6 +77,6 @@ Call your friends! Have fun!
 
 You can create as many games as you like in the `games` folder. Just copy the first one and rename it.
 
-Each game can have 100 files max. If you have more than 100 images or sounds, for examples, ask your agent: "URL-encode these images/sounds/clips using base64.".
+Each game can have 100 files max. If you have more than 100 images or sounds, for example, ask your agent: "URL-encode these images/sounds/clips using base64.".
 
 Each file can be 25MB max.
