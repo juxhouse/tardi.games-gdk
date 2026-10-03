@@ -47,16 +47,17 @@ Commit them to your `main` branch and push to Github. Every couple of minute, Ta
 }
 ```
 
-`sharedScreen` is required, and says how your game uses the shared screen — the
-TV everyone looks at, which runs your table:
+`sharedScreen` is required, and says how your game uses the Shared Screen: the
+screen all players see, which your Table renders when it runs on its own device
+(a big TV, for example):
 
 | Value | Meaning |
 | --- | --- |
-| `required` | The game cannot be played without the table. |
-| `optional` | It plays either way; the table adds to it when there is one. |
-| `none` | Hands only. The game shows no table at all. |
+| `required` | The game cannot be played without a Shared Screen. |
+| `optional` | It plays either way; the Shared Screen adds to it when there is one. |
+| `none` | Hands only. The game shows nothing on a Shared Screen. |
 
-Tardi lets players start a game with no shared screen, on their phones alone, so
+Tardi lets players start a game with no Shared Screen, on their phones alone, so
 it has to know which games that is honest for. `npm run dev` and `npm run build`
 fail until your `game.json` says.
 
@@ -65,7 +66,7 @@ fail until your `game.json` says.
 
 Your game Table and Hand will run in their own iframe and must be 100% responsive.
 
-- The Table will have landscape orientation, and must adapt to different iframe sizes.
+- The Shared Screen will always have landscape orientation, and your Table must adapt to different iframe sizes.
 - The Hand can have portrait or landscape orientation, and can also have different sizes.
 - Font sizes, spacing, and game element sizes must adapt automatically.
 - Do not assume a fixed viewport size, fixed aspect ratio, or a specific phone model.
@@ -143,9 +144,9 @@ TardiTable.sendToAllHands(message)  // Send any JS object you want.
 
 #### Playing Without a Shared Screen (Table)
 
-When players start your game on their phones alone, your Table still runs: on
-one of the phones, where nobody can see it. It must go on receiving messages
-and broadcasting state exactly as usual; only what it draws is wasted.
+When players start your game on their phones alone, there is no Shared Screen,
+and your Table runs on a player's device, out of sight. It must go on receiving messages
+and broadcasting state exactly as usual.
 
 ```js
 TardiTable.hasSharedScreen()  // false when nobody sees your Table.
@@ -153,12 +154,8 @@ TardiTable.hasSharedScreen()  // false when nobody sees your Table.
 
 It is known before your Table draws anything and does not change during a
 match, so check it once at startup. When it is `false`, skip rendering, and
-above all skip animation loops: they would drain the phone's battery for
-nothing. The Table's iframe is still full size, so a game that ignores this
-keeps working, just less efficiently.
-
-Only a game whose `sharedScreen` is `optional` or `none` is ever started
-without a shared screen.
+above all skip animation loops: they would drain the phone's CPU and battery for
+nothing.
 
 
 

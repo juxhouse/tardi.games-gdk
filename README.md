@@ -10,7 +10,8 @@ If you haven't played some games on [tardi.games](https://tardi.games) yet, go t
 A Tardi game is a turn-based or light-action game. Avoid heavy action, for a better player experience.
 
 - **Tardi** - The tardi.games platform, where your game will run.
-- **Table** - The part of your game that runs on a big TV or similar device, visible to everyone in the room. The "Table" is a view-only display. Users do not interact with it.
+- **Table** - The part of your game that is the central game server. It can run on its own device, with a Shared Screen that all players see, or it can run on a player's device, out of sight.
+- **Shared Screen** - The screen all players see, like a big TV. It is rendered by the Table, when the Table runs on its own device. It is a view-only display: players do not interact with it.
 - **Hand** - The part of your game that runs on a player's handheld device, like a phone or tablet. The "Hand" is the player's game controller.
 
 Tardi makes it easy for the Table and Hand parts of your game to send messages to each other (see below).
@@ -33,7 +34,7 @@ Clone it to your machine.
 Inside `games`, rename the `tic-tac-toe` folder to the name of your game. Use only lowercase a-z, digits and dashes.
 
 Inside your renamed game folder, edit the `game.json` file to set things like the game title, description and number of players.
-It must also set `sharedScreen` to `required`, `optional` or `none`, saying whether your game needs the TV table; see [SDK.md](SDK.md).
+It must also set `sharedScreen` to `required`, `optional` or `none`, saying whether your game needs a Shared Screen; see [SDK.md](SDK.md).
 
 
 #### 3) Code it
